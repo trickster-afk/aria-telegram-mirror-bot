@@ -12,8 +12,8 @@ if [[ -n $DYNO ]]; then
 		rm -rf /bot/accounts/.git
 	elif [[ -n $CLIENT_SECRET && -n $CREDENTIALS ]]; then
 		echo "Usage of token detected"
-		wget -q $CREDENTIALS -O /bot/accounts/credentials.json
-		wget -q $CLIENT_SECRET -O /bot/accounts/client_secret.json
+		wget -q $CREDENTIALS -O /bot/credentials.json
+		wget -q $CLIENT_SECRET -O /bot/client_secret.json
 	else
 		echo "Neither Service Accounts Nor Token Provided. Exiting..."
 		exit 0
